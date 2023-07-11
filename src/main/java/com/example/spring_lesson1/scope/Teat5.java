@@ -6,10 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Teat5 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("application_context2.xml");
+                new ClassPathXmlApplicationContext("application_context4.xml");
 
-        Dog dog = context.getBean("myPet", Dog.class);
-        Dog myDog = context.getBean("myPet", Dog.class);
+        Dog dog = context.getBean("dog", Dog.class);
+        Dog myDog = context.getBean("dog", Dog.class);
 
         System.out.println(dog == myDog);
         System.out.println(dog);
