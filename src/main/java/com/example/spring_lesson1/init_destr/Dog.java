@@ -9,7 +9,7 @@ public class Dog implements Pet{
         System.out.println("Gav");
     }
 
-    public void init() {
+    public void eliza() {
 
         System.out.println("Class Dog: init method");
     }

@@ -1,7 +1,10 @@
 package com.example.spring_lesson1.init_destr;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
+//import jakarta.annotation.PostConstruct;
+//import jakarta.annotation.PreDestroy;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class DatabaseConnection {
     private String connectionString;

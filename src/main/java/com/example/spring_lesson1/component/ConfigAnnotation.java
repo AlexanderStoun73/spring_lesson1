@@ -8,6 +8,7 @@ public class ConfigAnnotation {
                 new ClassPathXmlApplicationContext("application_context4.xml");
 
         Cat cat = context.getBean("cat", Cat.class);
+        System.out.println(cat);
         cat.say();
 
         context.close();

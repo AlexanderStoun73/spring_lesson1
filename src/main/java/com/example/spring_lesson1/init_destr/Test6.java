@@ -8,6 +8,9 @@ public class Test6 {
                 new ClassPathXmlApplicationContext("application_context3.xml");
 
         Dog dog = context.getBean("myPet", Dog.class);
+        System.out.println(dog);
+        Dog dog1 = context.getBean("myPet", Dog.class);
+        System.out.println(dog1);
         dog.say();
 
         context.close();

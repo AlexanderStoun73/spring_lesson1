@@ -1,6 +1,5 @@
 package com.example.spring_lesson1.component;
 
-import com.example.spring_lesson1.Pet;
 import org.springframework.stereotype.Component;
 
 /*
@@ -16,8 +15,10 @@ import org.springframework.stereotype.Component;
  */
 
 
-@Component    // по умолчанию scope component - singleton
+@Component   // по умолчанию scope component - singleton
 public class Cat implements Pet {
+
+    Dog dog = new Dog();
 
     public Cat() {
         System.out.println("Cat bean is created");

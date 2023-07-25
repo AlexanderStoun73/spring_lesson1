@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/tasks</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+
+        <!-- SQL dialect for your database -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Enable the second level cache (optional) -->
+        <!-- <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property> -->
+
+        <!-- Show SQL queries in logs (optional) -->
+         <property name="hibernate.show_sql">true</property>
+
+        <!-- Automatically create tables from entities -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!-- Mapping classes -->
+        <mapping class="com.example.spring_lesson1.hibernate.Employee"/>
+        <!-- Add more mapping classes if needed -->
+
+    </session-factory>
+</hibernate-configuration>

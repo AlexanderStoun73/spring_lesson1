@@ -7,9 +7,9 @@
 
     <bean id="myPet"
             class="com.example.spring_lesson1.init_destr.Dog"
-            init-method="init"
+            init-method="eliza"
             destroy-method="destroy"
-    scope="prototype">
+    scope="singleton">
 
     </bean>
 </beans>

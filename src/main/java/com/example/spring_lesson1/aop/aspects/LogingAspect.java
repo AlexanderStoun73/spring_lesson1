@@ -2,14 +2,26 @@ package com.example.spring_lesson1.aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
 public class LogingAspect {
-    @Before("execution(public void getBook())") // это место point cut (срез) выражение, где должен быть применен advice
+    //@Before("execution(public void com.example.spring_lesson1.aop.Library.getBook())") // это место point cut (срез) выражение, где должен быть применен advice
+                                                // Spring AOP использует AspectJ PointCut expression language. (Определенные
+                                                // правила в написании выражений для создания PointCut)
+    @Pointcut("execution(public * get*(..))")
+    private void allGetMethods(){}
+
+    @Before("allGetMethods()")
     public void beforeGetBookAdvice() {
         System.out.println("beforeGetBookAdvice: попытка получить книгу");
+    }
+
+    @Before("execution(public *  returnBook())")
+    public void beforeReturnBookAdvice() {
+        System.out.println("beforeReturnBookAdvice: попытка вернуть книгу");
     }
 }
 
