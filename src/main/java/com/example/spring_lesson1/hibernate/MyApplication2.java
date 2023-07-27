@@ -16,11 +16,13 @@ public class MyApplication2 {
         Session session = factory.getCurrentSession();
         session.beginTransaction();
 
-//        Employee employee = session.get(Employee.class,2L);
-//        employee.setSalary(1200);
+        Employee employee = session.get(Employee.class,2L);
+        employee.setSalary(1200);
 
 //        session.createQuery("update Employee set salary = 1000 where fullName = 'Alex'")
 //                        .executeUpdate();
+
+        session.createQuery("delete Employee where fullName = 'Alex'").executeUpdate();
 
 
         session.getTransaction().commit();

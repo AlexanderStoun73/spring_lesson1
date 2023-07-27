@@ -16,10 +16,12 @@ public class MyAppication1 {
         Session session = factory.getCurrentSession();
         session.beginTransaction();
 
-        List<Employee> employees = session.createQuery("from Employee").getResultList();
+//        List<Employee> employees = session.createQuery("from Employee").getResultList();
+//
+//        for (Employee employee : employees)
+//            System.out.println(employee);
 
-        for (Employee employee : employees)
-            System.out.println(employee);
+
 
         session.getTransaction().commit();
 

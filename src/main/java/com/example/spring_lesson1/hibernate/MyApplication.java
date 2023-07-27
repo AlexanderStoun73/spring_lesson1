@@ -16,20 +16,20 @@ public class MyApplication {
                 .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
-        Employee employee = new Employee("Alex", 500);
-        session.beginTransaction();
-        session.save(employee);
-
-        session.getTransaction().commit();
-
-        System.out.println("Данные успешно сохранены");
-
-        factory.close();
-        session = factory.getCurrentSession();
-        session.beginTransaction();
-        Employee employee1 = session.get(Employee.class, 2L);
-        session.getTransaction().commit();
-        System.out.println(employee1);
+//        Employee employee = new Employee("Alex", 500);
+//        session.beginTransaction();
+//        session.save(employee);
+//
+//        session.getTransaction().commit();
+//
+//        System.out.println("Данные успешно сохранены");
+//
+//        factory.close();
+//        session = factory.getCurrentSession();
+//        session.beginTransaction();
+//        Employee employee1 = session.get(Employee.class, 1L);
+//        session.getTransaction().commit();
+//        System.out.println(employee1);
 //// Создание контекста приложения на основе Java-конфигурации
 //        ApplicationContext context
 //                = new AnnotationConfigApplicationContext(AppConfig.class);

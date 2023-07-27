@@ -22,10 +22,11 @@
          <property name="hibernate.show_sql">true</property>
 
         <!-- Automatically create tables from entities -->
-        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Mapping classes -->
-        <mapping class="com.example.spring_lesson1.hibernate.Employee"/>
+        <mapping class="com.example.spring_lesson1.hibernate3.entity.Address"/>
+        <mapping class="com.example.spring_lesson1.hibernate3.entity.Employee"/>
         <!-- Add more mapping classes if needed -->
 
     </session-factory>
